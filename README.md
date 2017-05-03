@@ -27,7 +27,7 @@ $ docker-compose up
 $ curl -XPOST http://localhost:3000/webhooks -H 'Content-Type: application/json' -d @./sample/sample-payload.json
 ```
 
-You should now have a new (editorial) search result in your database. To inspect your data, use an appropriate Microsoft SQL Server client, e.g. [sqlcmd][sqlcmd].
+You should now have a new (editorial) search result in your database. To inspect your data, use an appropriate Microsoft SQL Server client, e.g. [sqlcmd][sqlcmd].  If your application is running you can view your documents at [http://localhost:3000/documents](http://localhost:3000/documents).
 
 ### On initial startup
 
