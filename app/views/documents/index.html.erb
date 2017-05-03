@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Documents</h1>
+<h3>(Latest 20 results)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Sentiment</th>
+      <th>Published</th>
+      <th>Image</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @documents.each do |document| %>
+      <tr>
+        <td><%= document.title %></td>
+        <td><%= document.sentiment %></td>
+        <td><%= time_ago_in_words(document.publish_date) %></td>
+        <td><%= image_tag(document.image_link, height: '32', width: '32') if document.image_link.present? %></td>
+        <td><%= link_to 'Show', document %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

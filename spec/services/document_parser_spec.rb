@@ -1,4 +1,4 @@
-require 'rails_helper'
+require 'spec_helper'
 
 describe DocumentParser do
   before do
@@ -7,7 +7,7 @@ describe DocumentParser do
   end
 
   it 'returns a document for an editorial payload' do
-    expect(@results).to be_a(Array)
+    expect(@results).to      be_a(Array)
     expect(@results.size).to eq(1)
   end
 
@@ -29,13 +29,13 @@ describe DocumentParser do
   end
 
   it 'creates document key phrases' do
-    document =  @results.first
+    document = @results.first
     expect(document.key_phrases.count).to eq(1)
     expect(document.key_phrases.map(&:phrase)).to match_array('fourth quarter')
   end
 
   it 'creates document matched_keywords' do
-    document =  @results.first
+    document = @results.first
     expect(document.matched_keywords.count).to eq(2)
     expect(document.matched_keywords.map(&:value)).to match_array(["Musk", "Tesla"])
   end

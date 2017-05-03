@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Document ID:</b>
+  <%= @document.meltwater_uuid %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @document.title %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @document.author %>
+</p>
+
+<p>
+  <b>Hit Sentence:</b>
+  <%= @document.hit_sentence %>
+</p>
+
+<p>
+  <b>Sentiment:</b>
+  <%= @document.sentiment %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @document.city %>
+</p>
+
+<p>
+  <b>Region:</b>
+  <%= @document.region %>
+</p>
+
+<p>
+  <b>Meta - Search Name:</b>
+  <%= @document.search_name %>
+</p>
+
+<p>
+  <b>Meta - Search ID:</b>
+  <%= @document.search_id %>
+</p>
+
+<p>
+  <b>Meta - Hook ID:</b>
+  <%= @document.hook_id %>
+</p>
+
+<p>
+  <b>Key Phrases:</b><br/>
+  <% @document.key_phrases.each do |key_phrase| %>
+    Phrase: <%= key_phrase.phrase %><br/>
+    Relevance: <%= key_phrase.relevance %><br/>
+  <% end %>
+</p>
+
+<p>
+  <b>Matched Keywords:</b><br/>
+  <% @document.matched_keywords.each do |matched_keyword| %>
+    <%= matched_keyword.value %><br/>
+  <% end %>
+</p>
+
+<p>
+  <b>Image:</b><br/>
+  <% if @document.image_link.present? %>
+    <%= image_tag(@document.image_link) %></td>
+<% end %>
+</p>
+
+<%= link_to 'Back', documents_path %>
