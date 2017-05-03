@@ -2,6 +2,15 @@
 
 Streaming Relation Database is a sample Rails 5.0.x app which can be used to receive Meltwater API search results (editorial) and stored to database. The selected database used in this sample project is [Microsoft SQL Server][mssql-server-official].
 
+## Prerequisites
+
+You will need following to run this sample Rails application:
+
+- [Docker][docker-official]
+- [docker-compose][docker-compose-official]
+
+_Note: Depending on your docker setup, `docker-compose` might already be included._
+
 ## Getting Started
 
 1. Run `docker-compose`:
@@ -51,6 +60,8 @@ Now you should be able to open [http://localhost:3000][rails-local].
 
 This repository is using [Microsoft's SQL Server as Linux docker container][mssql-server-linux-docker]. More information can be found [here][mssql-server-linux-docker].
 
+[docker-official]: https://www.docker.com/
+[docker-compose-official]: https://docs.docker.com/compose/
 [mssql-server-official]: https://www.microsoft.com/en-us/sql-server/
 [sqlcmd]: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-connect-and-query-sqlcmd
 [mssql-server-linux-docker]: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-docker
