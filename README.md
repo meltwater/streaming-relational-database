@@ -6,13 +6,17 @@ Streaming Relation Database is a sample Rails 5.0.x app which can be used to rec
 
 1. Run `docker-compose`:
 
-        $ docker-compose up
+```shell
+$ docker-compose up
+```
 
 2. Open [http://localhost:3000][rails-local] in your browser. This should greet you with the default Rails welcome page.
 
 3. Run a sample POST request with the provided [sample/sample-payload.json][sample-payload]:
 
-        $ curl -XPOST http://localhost:3000/webhooks -H 'Content-Type: application/json' -d @./sample/sample-payload.json
+```shell
+$ curl -XPOST http://localhost:3000/webhooks -H 'Content-Type: application/json' -d @./sample/sample-payload.json
+```
 
 You should now have a new (editorial) search result in your database. To inspect your data, use an appropriate Microsoft SQL Server client, e.g. [sqlcmd][sqlcmd].
 
@@ -22,19 +26,24 @@ The very first time you start `docker-compose up` the Rails app might exit after
 
 1. On initial run:
 
-        $ docker-compose up
+```shell
+$ docker-compose up
+```
 
 Rails app will exit on first time. Simply press CTRL-C to stop docker-compose.
 
 2. Run migration tasks:
 
-        $ docker-compose run web rake db:create
-        $ docker-compose run web rake db:migrate
-
+```shell
+$ docker-compose run web rake db:create
+$ docker-compose run web rake db:migrate
+```
 
 3. Re-run `docker-compose`:
 
-        $ docker-compose up
+```shell
+$ docker-compose up
+```
 
 Now you should be able to open [http://localhost:3000][rails-local].
 
