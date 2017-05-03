@@ -62,7 +62,7 @@ This repository is using [Microsoft's SQL Server as Linux docker container][mssq
 
 ## License
 
-See [LICENSE][LICENSE].
+See [LICENSE](LICENSE).
 
 [docker-official]: https://www.docker.com/
 [docker-compose-official]: https://docs.docker.com/compose/
