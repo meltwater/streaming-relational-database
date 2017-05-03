@@ -4,5 +4,6 @@ describe Document do
   describe 'associations' do
     it { is_expected.to have_many(:matched_keywords) }
     it { is_expected.to have_many(:key_phrases) }
+    it { is_expected.to have_one(:source) }
   end
 end
