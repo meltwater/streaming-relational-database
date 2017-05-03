@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe MatchedKeyword, type: :model do
+describe MatchedKeyword do
   describe 'associations' do
     it { is_expected.to belong_to(:document) }
   end

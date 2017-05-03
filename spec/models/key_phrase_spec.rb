@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe KeyPhrase, type: :model do
+describe KeyPhrase do
   describe 'associations' do
     it { is_expected.to belong_to(:document) }
   end
