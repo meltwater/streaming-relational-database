@@ -1,0 +1,29 @@
+[
+  {
+    "source_reach": 0,
+    "source_name": "Myinforms",
+    "source_country_code": "us",
+    "source_subregion": "Pennsylvania",
+    "metadata": {
+      "search_name": "hello",
+      "search_id": 1234,
+      "hook_id": "0a815fa3ee87489de1b932f178541f80c1f1038c"
+    },
+    "source_information_type": "news",
+    "document_url": "http://myinforms.com/en-us/a/43897824-musk-throws-pie-at-naysayers-as-tesla-posts-rare-profit/",
+    "document_title": "Musk Throws 'Pie' at Naysayers as Tesla Posts Rare Profit",
+    "document_sentiment": "negative",
+    "document_publish_date": "2016-02-01T05:10:14.371Z",
+    "document_language_code": "en",
+    "document_key_phrases": [
+      {
+        "relevance": 0.8843652458553874,
+        "phrase": "fourth quarter"
+      }
+    ],
+    "document_image_link": "http://i1.myinforms.com/300x200/default.jpg",
+    "document_id": "MweugEjvEhiuFbQQmid40Gs1Y-I",
+    "document_matched_keywords": ["Musk", "Tesla"],
+    "document_author": "John Doe"
+  }
+]
