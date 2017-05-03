@@ -1,6 +1,6 @@
 class DocumentsController < ApplicationController
   def index
-    @documents = Document.order(created_at: :desc).limit(20)
+    @documents = Document.order(publish_date: :desc).limit(20)
   end
 
   def show
