@@ -1,0 +1,30 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+#
+default: &default
+  adapter: sqlserver
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  host: localhost
+  port: 1433
+  username: sa
+  password: P@55w0rd
+
+development:
+  <<: *default
+  database: meltwater_dev
+
+#
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: meltwater_test
+
+production:
+  <<: *default
+  database: db/production.sqlite3
