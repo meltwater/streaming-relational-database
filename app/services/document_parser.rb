@@ -1,6 +1,12 @@
 class DocumentParser
 
-  def self.documents_from_json(json)
+  attr_reader :json
+
+  def initialize(json)
+    @json = json
+  end
+
+  def parse_documents
     documents = []
     JSON.parse(json).each do |record|
       document = Document.new
@@ -19,7 +25,9 @@ class DocumentParser
     documents
   end
 
-  def self.set_document_attributes(data, document)
+  private
+
+  def set_document_attributes(data, document)
     document.title          = data['document_title']
     document.image_link     = data['document_image_link']
     document.author         = data['document_author']
@@ -38,7 +46,7 @@ class DocumentParser
     end
   end
 
-  def self.set_key_phrases(data, document)
+  def set_key_phrases(data, document)
     data['document_key_phrases'].each do |key_phrase|
       document.key_phrases.new(
         phrase: key_phrase['phrase'], relevance: key_phrase['relevance']
@@ -46,13 +54,13 @@ class DocumentParser
     end
   end
 
-  def self.set_matched_keywords(data, document)
+  def set_matched_keywords(data, document)
     data['document_matched_keywords'].each do |keyword|
       document.matched_keywords.new(value: keyword)
     end
   end
 
-  def self.set_source(data, document)
+  def set_source(data, document)
     document.build_source(
       name:             data['source_name'],
       country_code:     data['source_country_code'],

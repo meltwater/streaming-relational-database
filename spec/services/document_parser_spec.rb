@@ -4,7 +4,7 @@ describe DocumentParser do
   describe 'parsing an editorial payload' do
     before do
       editorial_json = File.read('./spec/support/editorial_payload.json')
-      @results = DocumentParser.documents_from_json(editorial_json)
+      @results = DocumentParser.new(editorial_json).parse_documents
     end
 
     it 'returns a document for an editorial payload' do
@@ -45,7 +45,7 @@ describe DocumentParser do
   describe 'parsing a social payload' do
     before do
       social_json = File.read('./spec/support/social_payload.json')
-      @results = DocumentParser.documents_from_json(social_json)
+      @results = DocumentParser.new(social_json).parse_documents
     end
 
     it 'returns a document for an editorial payload' do
