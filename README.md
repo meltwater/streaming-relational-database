@@ -60,6 +60,10 @@ Now you should be able to open [http://localhost:3000][rails-local].
 
 This repository is using [Microsoft's SQL Server as Linux docker container][mssql-server-linux-docker]. More information can be found [here][mssql-server-linux-docker].
 
+## License
+
+See [LICENSE][LICENSE].
+
 [docker-official]: https://www.docker.com/
 [docker-compose-official]: https://docs.docker.com/compose/
 [mssql-server-official]: https://www.microsoft.com/en-us/sql-server/
