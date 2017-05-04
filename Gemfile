@@ -25,8 +25,14 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
-# Microsoft SQL server adapter. Note: 5.0.7 requires Rails 5.0.x, NOT 5.1.x or newer!
+###  Microsoft SQL server adapter. Note: 5.0.7 requires Rails 5.0.x, NOT 5.1.x or newer!
 gem 'activerecord-sqlserver-adapter', '~> 5.0.7'
+
+### Use the pg adapter for a PostgreSQL database
+# gem 'pg', '~> 0.18.4'
+
+### Use the mysql2 adapter when using a MySQL database
+# gem 'mysql2', '~> 0.4.6'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
