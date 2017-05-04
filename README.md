@@ -2,7 +2,7 @@
 
 Streaming Relation Database is a sample [Rails 5.0.x][rails-5.0.x] app which can be used to receive [Meltwater API][meltwater-api-docs] search results (editorial) and store the results in a relational database.
 
-The goal of the application is to provide an example of how data can be received from th Meltwater API and stored for later user in an application, for example on a product dashboard.
+The goal of the application is to provide an example of how data can be received from th Meltwater API and stored for later use in an application, for example on a product dashboard.
 
 The selected database used in this sample project is [Microsoft SQL Server][mssql-server-official], however it can easily be adapted to work with most major relational databases such as [PostgreSQL][postgre-sql] or [MySQL][my-sql].
 
@@ -101,7 +101,7 @@ If you don't see any results, ensure the search you're using has enough search r
 
 ## Using an Alternate Database
 
-The sample application and Docker package is setup to use [Microsoft SQL Server][mssql-server-official], however it easily be run with other relational databases.
+The sample application and Docker package is setup to use [Microsoft SQL Server][mssql-server-official], however it can easily be run with other relational databases.
 
 To do this we'll need to run the application locally without the use of docker.
 
@@ -113,12 +113,12 @@ To do this we'll need to run the application locally without the use of docker.
 
 ### Set the Rails database
 
-The project is set up to use the `activerecord-sqlserver-adapter`, Microsoft SQL Server database adapter. To use a different database, we need to change the database adapter.
+The project is set up to use the [`activerecord-sqlserver-adapter`][activerecord-sqlserver-adapter], Microsoft SQL Server database adapter. To use a different database, we need to change the database adapter.
 
-- Open up the [Gemfile][gemfile] and replace the `activerecord-sqlserver-adapter` gem with the appropriate adapter. (Remember to run `bundle install`if you install any new libraries.
+- Open up the [Gemfile][gemfile] and replace the `activerecord-sqlserver-adapter` gem with the appropriate adapter. (Remember to run `bundle install`if you install any new libraries.)
 - Update the [database.yml][database.yml] file with the appropriate configuration details for your database. You can find an example config file for PostgreSQL and MySQL in the [config][config] folder.
 
-See more details on configuring Rails database connections in the [Rails Guides][rails-connection-preference]
+See more details on configuring Rails database connections in the [Rails Guides][rails-connection-preference].
 
 ### Run the application
 
@@ -158,3 +158,4 @@ See [LICENSE](LICENSE).
 [rails-connection-preference]: http://guides.rubyonrails.org/configuring.html#connection-preference
 [database.yml]: https://github.com/meltwater/streaming-relational-database/blob/master/config/database.yml
 [config]: https://github.com/meltwater/streaming-relational-database/blob/master/config/
+[activerecord-sqlserver-adapter]: https://github.com/rails-sqlserver/activerecord-sqlserver-adapter
