@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170503080027) do
+ActiveRecord::Schema.define(version: 20170503212133) do
 
   create_table "documents", force: :cascade do |t|
     t.string   "title"
@@ -48,6 +48,17 @@ ActiveRecord::Schema.define(version: 20170503080027) do
     t.index ["document_id"], name: "index_matched_keywords_on_document_id"
   end
 
+  create_table "sources", force: :cascade do |t|
+    t.integer "document_id"
+    t.string  "name"
+    t.string  "country_code"
+    t.string  "sub_region"
+    t.string  "information_type"
+    t.integer "reach"
+    t.index ["document_id"], name: "index_sources_on_document_id"
+  end
+
   add_foreign_key "key_phrases", "documents", on_delete: :cascade
   add_foreign_key "matched_keywords", "documents", on_delete: :cascade
+  add_foreign_key "sources", "documents", on_delete: :cascade
 end

@@ -1,0 +1,32 @@
+[
+  {
+    "source_name": "twitter",
+    "source_country_code": "us",
+    "source_subregion": "MA",
+    "metadata": {
+      "search_name": "social search",
+      "search_id": 1234,
+      "hook_id": "0a815fa3ee87489de1b932f178541f80c1f1038c"
+    },
+    "source_information_type": "social",
+    "document_url": "https://twitter.com/Meltwater/status/841701967160311810",
+    "document_title": "Some tweet",
+    "document_sentiment": "positive",
+    "document_publish_date": "2016-02-01T05:10:14.371Z",
+    "document_language_code": "en",
+    "document_key_phrases": [
+      {
+        "relevance": 0.8843652458553874,
+        "phrase": "Pi Day"
+      }
+    ],
+    "document_image_link": "http://example.com/image",
+    "document_id": "MweugEjvEhiuFbQQmid40Gs1Y-I",
+    "document_matched_keywords": ["Pi"],
+    "document_city": "San Francisco",
+    "document_region": "California",
+    "document_author": "Meltwater",
+    "document_hit_sentence": "Happy Pi Day!",
+    "source_reach": 18700
+  }
+]
