@@ -1,8 +1,8 @@
 # Streaming Relational Database
 
-Streaming Relation Database is a sample [Rails 5.0.x][rails-5.0.x] app which can be used to receive [Meltwater API][meltwater-api-docs] search results (editorial) and store the results in a relational database.
+*Streaming Relation Database* is a sample [Rails 5.0.x][rails-5.0.x] app which can be used to receive (editorial) search results from the [Meltwater Streaming API][meltwater-api-docs] and store these results in a relational database.
 
-The goal of the application is to provide an example of how data can be received from th Meltwater API and stored for later use in an application, for example on a product dashboard.
+The goal of the application is to provide an example of how data can be received from the Meltwater Streaming API and stored for later use in an application, for example on a product dashboard.
 
 The selected database used in this sample project is [Microsoft SQL Server][mssql-server-official], however it can easily be adapted to work with most major relational databases such as [PostgreSQL][postgre-sql] or [MySQL][my-sql].
 
