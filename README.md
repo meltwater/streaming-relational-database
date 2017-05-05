@@ -1,8 +1,6 @@
 # Streaming Relational Database
 
-Streaming Relation Database is a sample [Rails 5.0.x][rails-5.0.x] app which can be used to receive [Meltwater API][meltwater-api-docs] search results (editorial) and store the results in a relational database.
-
-The goal of the application is to provide an example of how data can be received from th Meltwater API and stored for later use in an application, for example on a product dashboard.
+*Streaming Relational Database* is a sample [Rails 5.0.x][rails-5.0.x] app which can be used to receive (editorial) search results from the [Meltwater Streaming API][meltwater-api-docs] and store these results in a relational database. Once data from the Meltwater Streaming API is stored it can be integrated as part of your application, for example, as part of a product dashboard.
 
 The selected database used in this sample project is [Microsoft SQL Server][mssql-server-official], however it can easily be adapted to work with most major relational databases such as [PostgreSQL][postgre-sql] or [MySQL][my-sql].
 
@@ -55,6 +53,8 @@ $ docker-compose up
 
 2. Open [http://localhost:3000][rails-local] in your browser. This should greet you with the default Rails welcome page.
 
+<img src="public/images/rails_welcome.png" width="300" alt="Rails Welcome Page">
+
 3. Run a sample `POST` request with the provided [sample/sample-payload.json][sample-payload]:
 
 ```shell
@@ -64,6 +64,8 @@ $ curl -XPOST http://localhost:3000/webhooks -H 'Content-Type: application/json'
 You should now have a new (editorial) search result in your database. To inspect your data, use an appropriate Microsoft SQL Server client, e.g. [sqlcmd][sqlcmd].
 
 If your application is running you can view your documents at [http://localhost:3000/documents][localhost-documents-list].
+
+<img src="public/images/first-document.png" width="500" alt="Document Index Page">
 
 ### Setting the application up with real data
 
@@ -96,6 +98,8 @@ Verify that ngrok is setup correctly by visiting your ngrok URL in the browser -
 See the [Streaming API - Quick Start][streaming-quick-start] tutorial for details on how to create a Meltwater API hook. (In step #4 you'll use the ngrok public url as the `taget_url`)
 
 4. Once your hook is setup, refresh the page at [localhost:3000/documents][localhost-documents-list] . You should start to see some search results!
+
+<img src="public/images/document-list.png" width="500" alt="Document Index Page With Results">
 
 If you don't see any results, ensure the search you're using has enough search results to provide a stream of data.
 
