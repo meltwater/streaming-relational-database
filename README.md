@@ -1,9 +1,8 @@
 # Streaming Relational Database
 
-*Streaming Relational Database* is a sample [Rails 5.0.x][rails-5.0.x] app which can be used to receive (editorial) search results from the [Meltwater Streaming API][meltwater-api-docs] and store these results in a relational database. Once data from the Meltwater Streaming API is stored it can be integrated as part of your application, for example, as part of a product dashboard.
+*Streaming Relational Database* is a sample [Rails 5.0.x][rails-5.0.x] app which can be used to receive search results from the [Meltwater Streaming API][meltwater-api-docs] and store these results in a relational database. Once data from the Meltwater Streaming API is stored it can be integrated as part of your application, for example, as part of a product dashboard.
 
 The selected database used in this sample project is [Microsoft SQL Server][mssql-server-official], however it can easily be adapted to work with most major relational databases such as [PostgreSQL][postgre-sql] or [MySQL][my-sql].
-
 
 ## Prerequisites
 
@@ -13,6 +12,7 @@ The sample application has been created using Docker to setup and run the web se
 - [docker-compose][docker-compose-official] _Note: Depending on your docker setup, `docker-compose` might already be included._
 - [ngrok][ngrok] - will be used to make the local application accessible to the Meltwater API.
 
+_NOTE: The [Microsoft SQL Server Docker Image][mssql-server-official-docker] requires a significant amount of RAM. Make sure you allocate at least 4 GB of RAM to Docker before starting._
 
 ## Getting Started
 
@@ -61,7 +61,7 @@ $ docker-compose up
 $ curl -XPOST http://localhost:3000/webhooks -H 'Content-Type: application/json' -d @./sample/sample-payload.json
 ```
 
-You should now have a new (editorial) search result in your database. To inspect your data, use an appropriate Microsoft SQL Server client, e.g. [sqlcmd][sqlcmd].
+You should now have a new search result in your database. To inspect your data, use an appropriate Microsoft SQL Server client, e.g. [sqlcmd][sqlcmd].
 
 If your application is running you can view your documents at [http://localhost:3000/documents][localhost-documents-list].
 
@@ -149,6 +149,7 @@ See [LICENSE](LICENSE).
 [get-docker]: https://www.docker.com/get-docker
 [docker-compose-official]: https://docs.docker.com/compose/
 [mssql-server-official]: https://www.microsoft.com/en-us/sql-server/
+[mssql-server-official-docker]: https://hub.docker.com/r/microsoft/mssql-server-linux/
 [sqlcmd]: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-connect-and-query-sqlcmd
 [mssql-server-linux-docker]: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-docker
 [sample-payload]: ./sample/sample-payload.json
