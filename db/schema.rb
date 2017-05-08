@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20170503212133) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "documents", force: :cascade do |t|
     t.string   "title"
     t.string   "sentiment"
@@ -37,7 +40,7 @@ ActiveRecord::Schema.define(version: 20170503212133) do
     t.string   "phrase"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["document_id"], name: "index_key_phrases_on_document_id"
+    t.index ["document_id"], name: "index_key_phrases_on_document_id", using: :btree
   end
 
   create_table "matched_keywords", force: :cascade do |t|
@@ -45,7 +48,7 @@ ActiveRecord::Schema.define(version: 20170503212133) do
     t.string   "value"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["document_id"], name: "index_matched_keywords_on_document_id"
+    t.index ["document_id"], name: "index_matched_keywords_on_document_id", using: :btree
   end
 
   create_table "sources", force: :cascade do |t|
@@ -55,7 +58,7 @@ ActiveRecord::Schema.define(version: 20170503212133) do
     t.string  "sub_region"
     t.string  "information_type"
     t.integer "reach"
-    t.index ["document_id"], name: "index_sources_on_document_id"
+    t.index ["document_id"], name: "index_sources_on_document_id", using: :btree
   end
 
   add_foreign_key "key_phrases", "documents", on_delete: :cascade

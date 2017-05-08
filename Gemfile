@@ -26,10 +26,10 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 ###  Microsoft SQL server adapter. Note: 5.0.7 requires Rails 5.0.x, NOT 5.1.x or newer!
-gem 'activerecord-sqlserver-adapter', '~> 5.0.7'
+# gem 'activerecord-sqlserver-adapter', '~> 5.0.7'
 
 ### Use the pg adapter for a PostgreSQL database
-# gem 'pg', '~> 0.18.4'
+gem 'pg', '~> 0.18.4'
 
 ### Use the mysql2 adapter when using a MySQL database
 # gem 'mysql2', '~> 0.4.6'

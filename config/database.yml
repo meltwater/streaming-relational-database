@@ -1,11 +1,11 @@
 default: &default
-  adapter: sqlserver
+  adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
-  host: mssql
-  port: 1433
-  username: sa
-  password: P@55w0rd
+  encoding: unicode
+  host: localhost
+  port: 5432
+  username: meltwater
+  password: meltwater
 
 development:
   <<: *default
