@@ -1,3 +1,7 @@
+# Deprecation Notice
+
+This project is no longer actively maintained. If you need to create a client library for any of the Meltwater APIs, please refer to the OpenAPI specs of the respective API at developer.meltwater.com. From those OpenAPI specs you can generate the client yourself.
+
 # Streaming Relational Database
 
 *Streaming Relational Database* is a sample [Rails 5.0.x][rails-5.0.x] app which can be used to receive search results from the [Meltwater Streaming API][meltwater-api-docs] and store these results in a relational database. Once data from the Meltwater Streaming API is stored it can be integrated as part of your application, for example, as part of a product dashboard.
